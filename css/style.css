@@ -68,5 +68,51 @@
     transform: translateY(0);
   }
 }
+.clases .card {
+  height: 300px;
+  border: none;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.3s ease;
+}
+.clases .card:hover {
+  transform: scale(1.05);
+}
+.clases .card-boxeo {
+  background-color: #e63946;
+  border-bottom: 5px solid rgb(186.9013452915, 23.5986547085, 35.869955157);
+}
+.clases .card-crossfit {
+  background-color: #457b9d;
+  border-bottom: 5px solid rgb(45.6438053097, 81.3650442478, 103.8561946903);
+}
+.clases .card-yoga {
+  background-color: #2a9d8f;
+  border-bottom: 5px solid rgb(25.8542713568, 96.6457286432, 88.027638191);
+}
+
+.footer-fitness {
+  background-color: #2b2b2b;
+  color: #ffffff;
+}
+.footer-fitness .text-primary-sass {
+  color: #ff4500;
+}
+.footer-fitness .redes-sociales {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.footer-fitness .redes-sociales a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+.footer-fitness .redes-sociales a:hover {
+  color: #ff4500;
+}
 
 /*# sourceMappingURL=style.css.map */

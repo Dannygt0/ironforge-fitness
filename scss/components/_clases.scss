@@ -1,0 +1,30 @@
+@use "../base/variables";
+
+$disciplinas: (
+  "boxeo": #e63946,
+  "crossfit": #457b9d,
+  "yoga": #2a9d8f
+);
+
+.clases {
+  .card {
+    height: 300px;
+    border: none;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05); 
+    }
+  }
+
+
+  @each $nombre, $color in $disciplinas {
+    .card-#{$nombre} {
+      background-color: $color;
+      border-bottom: 5px solid darken($color, 15%);
+    }
+  }
+}

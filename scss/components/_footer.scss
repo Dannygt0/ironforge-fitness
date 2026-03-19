@@ -1,0 +1,32 @@
+@use "../base/variables";
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-fitness {
+  background-color: variables.$color-secundario;
+  color: variables.$color-blanco;
+
+  .text-primary-sass {
+    color: variables.$color-primario;
+  }
+
+  .redes-sociales {
+    @include flex-center;
+    gap: 1rem;
+
+    a {
+      color: variables.$color-blanco;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: variables.$color-primario;
+      }
+    }
+  }
+}
