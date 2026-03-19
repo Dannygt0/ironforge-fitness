@@ -7,26 +7,34 @@
 }
 
 .footer-fitness {
-  background-color: variables.$color-secundario;
+  background-color: #1a1a1a; 
   color: variables.$color-blanco;
-
-  .text-primary-sass {
-    color: variables.$color-primario;
+  
+  .text-danger {
+    color: variables.$color-primario !important; 
   }
 
   .redes-sociales {
-    @include flex-center;
-    gap: 1rem;
+    @include flex-center; 
+    gap: 1.5rem;
 
     a {
       color: variables.$color-blanco;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
+      font-size: 1.5rem;
+      transition: all 0.3s ease;
+      opacity: 0.7;
+      display: inline-block; 
 
       &:hover {
-        color: variables.$color-primario;
+        color: variables.$color-primario !important;
+        opacity: 1;
+        transform: translateY(-5px); 
       }
     }
+  }
+
+  hr {
+    border-color: rgba(255, 255, 255, 0.1);
   }
 }

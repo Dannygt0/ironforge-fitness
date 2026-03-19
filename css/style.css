@@ -93,26 +93,52 @@
 }
 
 .footer-fitness {
-  background-color: #2b2b2b;
+  background-color: #1a1a1a;
   color: #ffffff;
 }
-.footer-fitness .text-primary-sass {
-  color: #ff4500;
+.footer-fitness .text-danger {
+  color: #ff4500 !important;
 }
 .footer-fitness .redes-sociales {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 .footer-fitness .redes-sociales a {
   color: #ffffff;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
+  opacity: 0.7;
+  display: inline-block;
 }
 .footer-fitness .redes-sociales a:hover {
-  color: #ff4500;
+  color: #ff4500 !important;
+  opacity: 1;
+  transform: translateY(-5px);
+}
+.footer-fitness hr {
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
+}
+.card:hover img {
+  filter: grayscale(0%);
+}
+.card img {
+  transition: filter 0.4s ease;
+  filter: grayscale(20%);
+}
+.card .text-danger {
+  letter-spacing: 1px;
+  font-size: 0.9rem;
 }
 
 /*# sourceMappingURL=style.css.map */
