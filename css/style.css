@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  background-color: #2b2b2b !important;
+  padding: 1rem 0;
+}
+.navbar .navbar-brand {
+  color: #ff4500 !important;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: color 0.3s ease;
+}
+.navbar .navbar-brand:hover {
+  color: #ffffff !important;
+}
+.navbar .nav-link {
+  color: #ffffff !important;
+  margin-left: 1rem;
+  transition: color 0.3s ease;
+}
+.navbar .nav-link:hover {
+  color: #ff4500 !important;
+}
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  height: 80vh;
+}
+.hero .hero-content {
+  animation: fadeIn 1.5s ease-in-out;
+}
+.hero .hero-content h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+.hero .hero-btn {
+  background-color: #ff4500;
+  border: none;
+  padding: 15px 40px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+.hero .hero-btn:hover {
+  background-color: #ffffff;
+  color: #ff4500;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
