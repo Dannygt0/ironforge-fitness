@@ -1,0 +1,21 @@
+// Un mixin para reutilizar el efecto de centrado perfecto
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    @include flex-center;
+    flex-direction: column;
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+  
+  &.active {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

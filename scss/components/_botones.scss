@@ -1,0 +1,26 @@
+@use "../base/variables";
+
+.btn-naranja {
+  background-color: #ff4500;
+  border: none;
+  color: white;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+
+  &:hover {
+    background-color: #cc3700;
+    transform: scale(1.05);
+    color: white;
+  }
+}
+.btn-outline-custom {
+    border: 2px solid variables.$color-primario;
+    color: variables.$color-primario;
+    background: transparent;
+    transition: all 0.3s ease;
+
+    &:hover {
+        background-color: variables.$color-primario;
+        color: variables.$color-blanco;
+        transform: translateY(-2px);
+    }
+}

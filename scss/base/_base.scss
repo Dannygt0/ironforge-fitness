@@ -1,0 +1,23 @@
+@use "variables";
+
+body {
+    font-family: variables.$font-secondary; // Roboto para lectura
+    color: variables.$color-texto;
+    background-color: variables.$color-fondo;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: variables.$font-primary;
+    text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: variables.$color-secundario;
+}
+::-webkit-scrollbar-thumb {
+    background: variables.$color-primario;
+    border-radius: 10px;
+}

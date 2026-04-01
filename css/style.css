@@ -4,8 +4,57 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+  color: #333333;
+  background-color: #f4f4f4;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2b2b2b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff4500;
+  border-radius: 10px;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .navbar {
-  background-color: #2b2b2b !important;
+  /* 1. Fondo con transparencia y desenfoque */
+  background: rgba(43, 43, 43, 0.85) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  /* 2. Mantener arriba al hacer scroll */
+  position: sticky !important;
+  top: 0;
+  z-index: 1050;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem 0;
 }
 .navbar .navbar-brand {
@@ -13,7 +62,6 @@
   font-weight: bold;
   font-size: 1.5rem;
   text-transform: uppercase;
-  letter-spacing: 2px;
   transition: color 0.3s ease;
 }
 .navbar .navbar-brand:hover {
@@ -22,20 +70,37 @@
 .navbar .nav-link {
   color: #ffffff !important;
   margin-left: 1rem;
-  transition: color 0.3s ease;
+  transition: all 0.3s ease;
 }
 .navbar .nav-link:hover {
   color: #ff4500 !important;
+  transform: translateY(-2px);
+}
+.navbar .navbar-toggler-icon {
+  filter: invert(1);
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .hero {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1470&auto=format&fit=crop");
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("..//assets/img/heroe.jpeg");
   background-size: cover;
   background-position: center;
-  height: 80vh;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .hero .hero-content {
-  animation: fadeIn 1.5s ease-in-out;
+  animation: fadeInUp 1s ease-out forwards;
 }
 .hero .hero-content h1 {
   text-transform: uppercase;
@@ -44,30 +109,16 @@
 }
 .hero .hero-btn {
   background-color: #ff4500;
-  border: none;
+  border-radius: 50px;
   padding: 15px 40px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 .hero .hero-btn:hover {
-  background-color: #ffffff;
-  color: #ff4500;
-  transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(255, 69, 0, 0.4);
+  letter-spacing: 2px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 .clases .card {
   height: 300px;
   border: none;
@@ -90,6 +141,47 @@
 .clases .card-yoga {
   background-color: #2a9d8f;
   border-bottom: 5px solid rgb(25.8542713568, 96.6457286432, 88.027638191);
+}
+
+.card {
+  overflow: hidden;
+  border: none;
+}
+.card .coach-img {
+  height: 350px !important;
+  width: 100%;
+  object-fit: cover;
+  object-position: top;
+  filter: grayscale(100%) brightness(0.9);
+  transition: filter 0.6s ease, transform 0.6s ease;
+}
+.card:hover .coach-img {
+  filter: grayscale(0%) brightness(1);
+  transform: scale(1.1);
+}
+
+.btn-naranja {
+  background-color: #ff4500;
+  border: none;
+  color: white;
+  transition: background-color 0.4s ease, transform 0.3s ease;
+}
+.btn-naranja:hover {
+  background-color: #cc3700;
+  transform: scale(1.05);
+  color: white;
+}
+
+.btn-outline-custom {
+  border: 2px solid #ff4500;
+  color: #ff4500;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.btn-outline-custom:hover {
+  background-color: #ff4500;
+  color: #ffffff;
+  transform: translateY(-2px);
 }
 
 .footer-fitness {
@@ -120,25 +212,6 @@
 }
 .footer-fitness hr {
   border-color: rgba(255, 255, 255, 0.1);
-}
-
-.card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15) !important;
-}
-.card:hover img {
-  filter: grayscale(0%);
-}
-.card img {
-  transition: filter 0.4s ease;
-  filter: grayscale(20%);
-}
-.card .text-danger {
-  letter-spacing: 1px;
-  font-size: 0.9rem;
 }
 
 /*# sourceMappingURL=style.css.map */

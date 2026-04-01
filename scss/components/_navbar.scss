@@ -1,7 +1,17 @@
 @use "../base/variables";
 
 .navbar {
-  background-color: variables.$color-secundario !important; 
+  /* 1. Fondo con transparencia y desenfoque */
+  background: rgba(43, 43, 43, 0.85) !important; // Forzamos el color secundario con transparencia
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  
+  /* 2. Mantener arriba al hacer scroll */
+  position: sticky !important;
+  top: 0;
+  z-index: 1050;
+  
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1rem 0;
 
   .navbar-brand {
@@ -9,8 +19,7 @@
     font-weight: bold;
     font-size: 1.5rem;
     text-transform: uppercase;
-    letter-spacing: 2px;
-    transition: color 0.3s ease; 
+    transition: color 0.3s ease;
 
     &:hover {
       color: variables.$color-blanco !important;
@@ -20,10 +29,15 @@
   .nav-link {
     color: variables.$color-blanco !important;
     margin-left: 1rem;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
 
     &:hover {
       color: variables.$color-primario !important;
+      transform: translateY(-2px);
     }
+  }
+
+  .navbar-toggler-icon {
+    filter: invert(1);
   }
 }
