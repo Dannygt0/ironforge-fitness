@@ -1,38 +1,56 @@
-# 🏋️‍♂️ IronForge Fitness - Entrega Final
+🏋️‍♂️ IronForge Fitness - Entrega Final
+IronForge Fitness es una plataforma web de alto rendimiento para entusiastas del fitness. Este proyecto no es solo una página estática; es una demostración de maquetación profesional, arquitectura de estilos escalable y optimización de experiencia de usuario (UX).
 
-**IronForge Fitness** es una plataforma web moderna diseñada para un gimnasio de alto rendimiento. El proyecto se enfoca en una experiencia de usuario fluida, diseño responsivo y una arquitectura de estilos escalable.
+🚀 Demo
+👉 Ver sitio en vivo aquí
 
----
+✨ Características Principales (Pro Highlights)
+Para elevar este proyecto al nivel de portafolio profesional, se implementaron las siguientes soluciones técnicas:
 
-## 🚀 Demo
-Puedes ver el sitio en vivo aquí: [https://dannygt0.github.io/ironforge-fitness/](https://dannygt0.github.io/ironforge-fitness/)
+Arquitectura SASS 7-1 Modular: Organización profesional de archivos para mantener un código limpio, mantenible y escalable.
 
----
+Efecto Glassmorphism: Navbar moderno con desenfoque de fondo (backdrop-filter) y transparencia, optimizado para legibilidad durante el scroll.
 
-## 🛠️ Tecnologías Utilizadas
+Micro-interacciones Dinámicas: * Filtros inteligentes en la sección de Coaches (Blanco y Negro a Color en hover).
 
-* **HTML5**: Estructura semántica para SEO y accesibilidad.
-* **SASS (Syntactically Awesome Style Sheets)**: 
-    * Uso de **Variables** para gestión de colores y fuentes.
-    * **Mixins** para reutilización de código (Flexbox, transiciones).
-    * **Operadores y @each** para la generación dinámica de clases de utilidades.
-    * **Arquitectura de carpetas** (Base, Layout, Components).
-* **Bootstrap 5.3**: Implementación de Sistema de Grillas, Navbars, Cards y utilidades de espaciado.
-* **Git & GitHub**: Control de versiones y despliegue automatizado.
+Transiciones suaves con transform: scale y efectos elásticos en botones.
 
----
+Diseño "Mobile-First": Totalmente responsivo utilizando el sistema de grillas de Bootstrap 5.3 y media queries personalizadas en SASS.
 
-## 📂 Estructura del Proyecto
+Optimización SEO & Performance: Uso de etiquetas semánticas, metaetiquetas Open Graph (OG) y lazy loading en imágenes de alta resolución.
 
-```text
+🛠️ Stack Tecnológico
+HTML5: Estructura semántica, accesibilidad (Roles ARIA) y SEO.
+
+SASS (Modern SCSS):
+
+Variables & Maps: Gestión centralizada de la paleta de colores y tipografías (Oswald & Roboto).
+
+Mixins & Extends: Reutilización de lógica de centrado y efectos de transición.
+
+Nesting & Parent Selector: Código más legible y específico.
+
+@use Pattern: Implementación del sistema de módulos moderno de SASS (evitando el obsoleto @import).
+
+Bootstrap 5.3: Componentes avanzados (Navbar, Grid System, Cards, Dropdowns).
+
+Google Fonts & Bootstrap Icons: Tipografía premium e iconografía vectorial.
+
+📂 Estructura del Proyecto (Clean Architecture)
+Plaintext
 /
-├── index.html          # Página de inicio (Hero, Staff, Footer)
-├── /pages              # Directorio de secciones secundarias
-│   ├── clases.html     # Catálogo de disciplinas
-│   └── contacto.html   # Formulario de inscripción
-├── /scss               # Código fuente de estilos (Preprocesador)
-│   ├── /base           # Variables, Reset y Mixins
-│   ├── /layout         # Header, Nav y Footer
-│   └── /components     # Cards de profes, Hero y Secciones
-├── /css                # Estilos finales compilados (CSS nativo)
-└── /img                # Recursos visuales y assets (Opcional)
+├── index.html          # Landing Page principal (SEO optimized)
+├── /pages              # Secciones secundarias del sitio
+│   ├── clases.html     # Catálogo de disciplinas y horarios
+│   └── contacto.html   # Formulario de inscripción validado
+├── /scss               # Arquitectura modular de estilos
+│   ├── /base           # Variables, Reset, Tipografía y Mixins
+│   ├── /components     # Navbar (Glassmorphism), Hero, Cards (Coaches), Buttons
+│   └── main.scss       # Archivo maestro de compilación
+├── /css                # Estilos transpilados finales (style.css)
+├── /assets             # Recursos del proyecto
+│   ├── /img            # Imágenes optimizadas y Favicon
+│   └── /icons          # Iconografía personalizada
+└── .gitignore          # Exclusión de archivos innecesarios (node_modules)
+👨‍💻 Autor
+Daniel Muñoz – Desarrollo Front-end
